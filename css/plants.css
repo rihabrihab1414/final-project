@@ -1,0 +1,356 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container
+{
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container header
+{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+.container header .left 
+{
+    height: 100%;
+    width: 70%;
+    display: flex;    
+    /*border-left: 1px solid black;*/
+    
+}
+.container header .left .name 
+{
+    height:100%;
+    width:20%;
+   /* border-right: 1px solid black;*/
+    
+    
+}
+.container header .left .name h3
+{
+    margin:20px 70px 30px 60px;
+}
+.container header .left nav
+{
+    width: 80%;
+    height:100%;
+    display: flex;
+    padding: 10px 60px ;
+    /*border-right: 1px solid black;*/
+}
+.container header nav ul
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between ;
+  margin:10px;
+
+}
+.container header nav ul li
+{
+    list-style: none;
+}
+.container header nav ul li a
+{
+color: black;
+text-decoration: none;
+font-size: 1rem;
+}
+.container header .right
+{
+    height: 100%;
+    width: 30%;
+    border-right: 1px solid black;
+    display: flex;
+}
+.container header .right .dropdown
+{
+    min-width: 13rem;
+    position: relative;
+    margin: 0.9rem 170px;
+    
+}
+.dropdown 
+{
+    box-sizing: border-box;
+}
+.container header .right .dropdown .select
+{
+    background:#399918;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px #2a2f3b solid;
+    border-radius: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container header .right .dropdown .select:hover
+{
+    background:#3f9f43;
+}
+.container header .right .dropdown .select .caret
+{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.caret-rotate
+  {
+    transform: rotate(180deg);
+  }
+  .container header .right .dropdown .menu
+  {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color:#9fa5b5;
+    position: absolute;
+    top:3em;
+    left:50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index:1;
+  } 
+  .container header .right .dropdown .menu li
+  {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+  .container header .right .dropdown .menu li:hover
+  {
+    /*background: #2a2d35;*/
+    background: #45a049;
+  }
+  .active
+  {
+    /*background: #323742;*/
+    background: #45a049;
+  }
+  .container header nav ul li a:hover
+{
+    transition: none;
+    border-bottom: #ccc solid 1px;
+    color: #237c27;
+}
+  .menu-open
+  {
+    display: block;
+    opacity: 1;
+  }
+
+.container .section01 {
+    background-image: url('../imag/Download\ free\ image\ of\ Blank\ paper\ with\ small\ houseplants\ flat\ lay\ by\ Ake\ about\ photo\ frame\,\ flat\ lay\,\ small\ potted\ plant\,\ cactus\ text\,\ and\ empty\ table\ 3801152.jpg'); /* رابط الصورة */
+    background-size: cover; /* لضمان تغطية الخلفية بالكامل */
+    background-position: center; /* لضبط موضع الصورة في الوسط */
+    height: 500px; /* ارتفاع الحاوية، يمكنك تعديله حسب رغبتك */
+    position: relative; /* لجعل الحاوية الأساسية موضعًا مرجعيًا للمحتوى */
+  }
+  
+  .container .section01 .content {
+    position: absolute; /* لوضع المحتوى فوق الخلفية */
+    top: 50%; /* لتحريك المحتوى إلى منتصف الحاوية عموديًا */
+    left: 50%; /* لتحريك المحتوى إلى منتصف الحاوية أفقيًا */
+    transform: translate(-50%, -50%); /* لموازنة الإزاحة وجعل النص في منتصف الحاوية */
+    text-align: center; /* لمحاذاة النص إلى الوسط */
+    color: #fff; /* لون النص، يمكنك تغييره حسب رغبتك */
+    background-color: rgba(0, 0, 0, 0.3); /* خلفية شبه شفافة للنص لجعله أكثر وضوحًا */
+    padding: 20px; /* مساحة داخلية حول النص */
+    border-radius: 10px; /* لجعل زوايا الحاوية المستطيلة للنص دائرية */
+  }
+  .order-button {
+    display: inline-block;
+    margin-top: 20px; /* إضافة مسافة بين النص والزر */
+    padding: 10px 20px; /* مساحة داخلية للزر */
+    background-color: #399918; /* لون خلفية الزر */
+    color: #fff; /* لون النص داخل الزر */
+    text-decoration: none; /* إزالة التسطير من الرابط */
+    border-radius: 5px; /* زوايا دائرية للزر */
+    transition: background-color 0.3s ease; /* تأثير الانتقال عند تمرير الفأرة */
+  }
+  
+  .order-button:hover {
+    background-color: #45a049; /* تغيير لون الزر عند التمرير فوقه */
+  }
+  .container .section02
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    
+  }
+  .container .section02 .left02
+  {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    border-right: 1px solid black;
+    background-color:#C0EBA6;
+    margin: 10px;
+  }
+  .container .section02 h1
+  {
+    
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 50px; 
+  
+  }
+  .container .section02 .section02a
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .container .section02 .section02a .left02 img
+  {
+    height: 80%;
+    width: 40%;
+    margin: 20px;
+    
+  }
+ 
+  
+  .categories {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .categories h2
+  {
+    margin: 0px 0px 14px;
+
+  }
+  
+  .category-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .category-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .category-item.large {
+    grid-row: span 2;
+  }
+  
+  .category-item img {
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  /* Custom sizes for each image */
+  .round-plant {
+    width: 30%; /* Adjust as needed */
+  }
+  
+  .square-plant {
+    width: 50%; /* Adjust as needed */
+  }
+  
+  .cactus {
+    width: 40%; /* Adjust as needed */
+  }
+  
+  .category-item h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+   
+  }
+  .promo-text {
+    /*margin-top: 10px;
+    font-size: 0.9rem;
+    color: black;
+    text-align: ;
+    line-height: 1.4;
+  }*/
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 2.4;
+   
+
+}
+.section02 {
+  /*background-image: linear-gradient(to right,#399918 , #88C273);*/
+
+  text-align: center; /* محاذاة النص في الوسط */
+}
+h1
+{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 50px; 
+  
+
+}
+.image-container {
+  position: relative;
+  width: 300px; /* عرض الحاوية */
+  height: 300px; /* ارتفاع الحاوية */
+  margin: 20px 30cap; /* مسافة علوية وسفلية */
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease; /* تأثير الانتقال */
+}
+
+.image-container img.hidden {
+  transform: translateX(100%); /* تحريك الصورة المختفية */
+}
+
+.image-container img.active {
+  transform: translateX(0); /* إعادة الصورة النشطة إلى وضعها */
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80px;
+  background-image: linear-gradient(to right,#347928 , #88C273);
+
+}
+ 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/plants.css">
+    <link rel="icon" href="../imag/icons8-sprout-48.png">
+    
+    <title>plants</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+       <div class="left">
+        <div class="name">
+            <h3>Plants</h3>
+        </div>
+       <nav>
+        <ul>
+            <li> <a href="#">Countact</a></li>
+            <li> <a href="#">About us</a></li>
+            <li> <a href="#">Blog</a></li>
+            <li> <a href="#">Home</a></li>
+        </ul>
+
+       </nav>
+     </div>
+        
+        <div class="right">
+            <div class="dropdown">
+               <div class="select">
+                <span class="selected">suggesition</span>
+                <div class="caret"></div>
+               </div>
+               <ul class="menu">
+                <li>alovera</li>
+                <li> Aloe Vera</li>
+                <li> Chest Plant</li>   
+                <li>Cactus</li>
+                <li>Bougainvillea</li>
+               </ul>
+            </div>
+                
+              
+
+        
+
+
+  </header>
+
+    <div class="section01">
+        <div class="content">
+          <h1>Did you need plant?</h1>
+          <p>"Choose your plant, and start your journey of caring for nature."</p>
+          <a href="#" class="order-button">Order Now</a>
+
+        </div>
+      </div>
+      
+     
+        <div class="categories">
+          <h2>SHOP BY CATEGORIES</h2>
+          <div class="category-container">
+            <div class="category-item large" style="background-color: #399918;">
+              <img class="round-plant" src="../imag/Serene Monstera Plant in Stylish Beige Pot - Indoor Plant Enthusiast's Favorite.jpg" alt="Round Potted Plants">
+              <div style="display :flex; flex-direction: column;">
+                <h3 style="margin-bottom: 20px;">Houseplants</h3>
+                <p class="promo-text">
+                "Bring Life to Your Space with a Beautiful Houseplant! 🌿
+  
+                  Nothing transforms your home like the vibrant touch of a houseplant. It’s more than just a piece of decor—it's a natural companion that purifies the air and adds a calming, refreshing vibe to any room. Easy to care for and perfect for every corner, from your living room to your home office.
+                  
+                  Pick your plant today and add a green touch that inspires you every day!"
+                </p>
+              </div>
+          
+            </div>
+            <div class="category-item" style="background-color: #399918;">
+              <img class="square-plant" src="../imag/téléchargement (14).jpg" alt="Square Potted Plants">
+              <h3>Flowering Plants</h3>
+            </div>
+            <div class="category-item" style="background-color: #399918;">
+              
+              <img class="cactus" src="../imag/Tiered Hexagonal Bamboo Planter.jpg" alt="ii">
+              <h3>Thorny Plants</h3>
+            </div>
+          </div>
+        </div>
+    </div>
+        
+        
+        
+         
+      
+        
+    
+    <h1> the pot for your plants</h1>
+      <div class="section02">
+       <!-- <h1> the pot for your plants</h1>-->
+        <div class="image-container">
+          <img src="../imag/Belly Small Planter, Matte White 12_H.jpg" alt="Image 1" class="active">
+          <img src="../imag/img0.png" alt="Image 2" class="hidden">
+          <img src="../imag/img3.jpg" alt="Image 3" class="hidden">
+          <img src="../imag/img4.jpg" alt="Image 4" class="hidden">
+          <img src="../imag/img5.jpg" alt="Image 5" class="hidden">
+          <img src="../imag/img7 (1).jpg" alt="Image 6" class="hidden">
+      </div>
+      
+      <button id="toggleButton">skip</button>
+      </div>
+      <div class="section3">
+
+
+      </div>
+      </div>
+    
+    
+      
+
+      <script>
+        
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+        const select = dropdown.querySelector('.select');
+        const caret = dropdown.querySelector('.caret');
+        const menu = dropdown.querySelector('.menu');
+        const options = dropdown.querySelectorAll('.menu li');
+        const selected = dropdown.querySelector('.selected');
+        select.addEventListener('click',() => { 
+        select.classList.toggle('select-clicked');
+        caret.classList.toggle('caret-rotate');
+        menu.classList.toggle('menu-open');
+        });
+        options.forEach(option =>{
+            option.addEventListener('click',()=>{
+            selected.innerText=option.innerText;
+            select.classList.remove('select-clicked');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('menu-open');
+            options.forEach(option =>{
+                option.classList.remove('active');
+            });
+            option.classList.add('active');
+        });
+
+         });
+        });
+        const images = document.querySelectorAll('.image-container img');
+        const button = document.getElementById('toggleButton');
+       
+        let currentIndex = 0;
+
+        button.addEventListener('click', () => {
+            images[currentIndex].classList.toggle('active');
+            images[currentIndex].classList.toggle('hidden');
+            currentIndex = (currentIndex + 1) % images.length; 
+            images[currentIndex].classList.toggle('active');
+            images[currentIndex].classList.toggle('hidden');
+        });
+       
+        
+       
+      </script>
+
+    
+</body>
+</html>

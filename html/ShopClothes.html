@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imag/boutique.png">
+    <link rel="stylesheet" href="../css/ShopCloths.css">
+    <title>EVA Shop</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="off-screen-menu">
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </div>
+          
+              <nav>
+                <div class="content">
+                    <img src="../imag/online-shopping.png">
+                    <div class="content2">
+                    <a  href="#">about</a>
+                    <a  href="#">FAQs</a>
+                    </div>
+
+                </div>
+                <div class="name">
+                    <img src="../imag/letter-e (1).png">
+                    <h3>shop.eva</h3>
+                </div>
+                <div class="ham-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                
+              </nav>
+         <div class="section01">
+            <ul class="menu">
+                <li>
+                  <p>categorie</p>
+                  <img src="../imag/down.png" alt="icon for down arrow" />
+                  <ul class="submenu">
+                    <li>Casual Wear</li>
+                    <li>Classic</li>
+                    <li>Formal</li>
+                    <li>Informal</li>
+                    <li>Sporty</li>
+                  </ul>
+                </li>
+              </ul>  
+              <ul class="menu2">
+                <li>
+                  <p>New Product</p>
+                  <img src="../imag/down.png" alt="icon for down arrow" />
+                  <ul class="submenu">
+                    <li>Winter wear</li>
+                    <li>Swimwear</li>
+                    
+                  </ul>
+                </li>
+              </ul> 
+              <div class="search-container">
+                <input type="search" placeholder="search">
+                <button type="submit">
+                    <img src="../imag/search.png" alt="بحث"> 
+                </button>
+            </div>  
+            <div class="butt">
+            <button type="submit">Men</button>
+            <button type="submit">Women</button>
+            <button type="submit">Children</button>
+            <button type="submit">Brand</button>
+            <button type="submit">View all</button>
+           
+            </div>
+            </div> 
+        </header>
+        <div class="section02">
+            <div class="left">
+            <h1>Where digital meets style</h1>
+            <img src="../imag/right-down.png">
+            <p>Show your style with premium clothing, directly from the eva stor</p>
+            </div>
+            <div class="right">
+             <button type="submit">
+                <img src="../imag/arrow-right.png" alt="بحث"> 
+             </button>
+             <p>Tronsforming into staylish & <br> function pieces</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        const hamMenu = document.querySelector(".ham-menu");
+
+const offScreenMenu = document.querySelector(".off-screen-menu");
+
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
+
+    </script>
+    
+</body>
+</html>
